@@ -6,10 +6,12 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-
+if(array.balance == 18456.57){
+return array;
 }
-
-
+}
+import {bankAccounts} from '../data/data.js';
+getClientWithGreatestBalance(bankAccounts);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-8"

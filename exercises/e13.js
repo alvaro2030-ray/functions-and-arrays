@@ -6,8 +6,19 @@
 
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
   // Your code goes here...
+  var depositsList = [];
+  var deposit = [];
+  for (let i in array) {
+    deposit = array[i].deposits + array[i].deposits;
+   if(deposit < 2000){
+      depositsList.push(array[i].deposits); 
+}
+return depositsList
+  }
 
 }
+import {bankAccounts} from '../data/data.js';
+getAllAccountsWithSumsOfDepositsLess2000(bankAccounts)
 
 
 

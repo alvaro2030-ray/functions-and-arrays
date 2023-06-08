@@ -7,7 +7,24 @@
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
   
+  var bankAccount = [];
+
+    for (let i in array) {
+      if(array[i].balance > 0){
+        bankAccount.push(array[i]);
+        return bankAccount;
+  }
+  if(array[i].balance < 0){
+    return bankAccount;
 }
+if(array[i].balance > 0 && array[i].balance < 2){
+  bankAccount.push(array[i]);
+  return bankAccount;
+}
+  }
+}
+  import {bankAccounts} from '../data/data.js';
+  getClientWithLeastPositiveBalance(bankAccounts);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"

@@ -6,9 +6,15 @@
 
 export function getAllClientNames(array) {
   // Your code goes here...
+  var nameAccount = [];
+for (let i = 0; i < array.length; i++) {
 
+nameAccount.push(array[i].name);
 }
-
+return nameAccount;
+}
+import {bankAccounts} from '../data/data.js';
+getAllClientNames(bankAccounts);
 
 
 // === TEST YOURSELF ===

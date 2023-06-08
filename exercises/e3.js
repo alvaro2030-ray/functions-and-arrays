@@ -10,8 +10,18 @@
 
 export function getAverage(array) {
   // Your code goes here...
+  var sum = 0;
+  var added;
+  var aver1;
+  for (let i = 0; i < array.length; i++) {
+    added = sum += array[i];
+    aver1 = added/array.length;
+  }
+  return aver1;
 
 }
+getAverage([22, 45 , 4, 65]);
+
 
 
 /** 
@@ -23,8 +33,20 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
-
-}
+    var sum = 0;
+     var added =0;
+    var num1 = [];
+    for (let i = 0; i < str.length; i++) {
+      num1 = parseInt(str[i]);
+      if(Number.isInteger(num1)){
+       sum = added += num1;
+     } else if(!Number.isNaN(num1)){ 
+      sum = 0;
+     }
+    }
+    return sum;
+  }
+  getStringSum('GH2U87A');
 
 
 // === TEST YOURSELF ===

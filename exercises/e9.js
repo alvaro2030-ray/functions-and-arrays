@@ -6,8 +6,19 @@
 
 export function getClientsWithBalanceOverOneHundred(array) {
   // Your code goes here...
+  var num = [];
+  var num2 =[];
+  for (let i in array){
+num = array[i].balance;
+if(num > 100){
+  num2.push(array[i]);
 
 }
+  }
+  return num2;
+}
+import {bankAccounts} from '../data/data.js';
+getClientsWithBalanceOverOneHundred(bankAccounts);
 
 
 

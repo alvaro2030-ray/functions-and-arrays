@@ -6,9 +6,18 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
+  var withdrawalsList = [];
+  var numbers = [];
+  for (let i in array){
+    
+    numbers = array[i].withdrawals;
+    withdrawalsList.push(numbers);
 
+    return withdrawalsList;
+      }  
 }
-
+import {bankAccounts} from '../data/data.js';
+getAllWithdrawals(bankAccounts)
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-11"
 // If the test has all tests passed, switch to the next exercise file
