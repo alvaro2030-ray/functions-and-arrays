@@ -7,21 +7,21 @@
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
   // Your code goes here...
   var depositsList = [];
-  var deposit = [];
+  var bankList = [];
+  var finalList = [];
   for (let i in array) {
-    deposit = array[i].deposits + array[i].deposits;
-   if(deposit < 2000){
-      depositsList.push(array[i].deposits); 
-}
-return depositsList
+    var sum = 0;
+    depositsList.push(array[i].deposits);
+    for(let j in depositsList[i]){
+      sum += depositsList[i][j]
+    }
+    bankList.push(sum);
+    if(bankList[i] < 2000){
+      finalList.push(array[i]);
+    }
   }
-
+  return finalList;
 }
-import {bankAccounts} from '../data/data.js';
-getAllAccountsWithSumsOfDepositsLess2000(bankAccounts)
-
-
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-13"
 // If the test has all tests passed, switch to the next exercise file

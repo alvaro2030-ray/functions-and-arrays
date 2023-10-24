@@ -6,18 +6,18 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-  var withdrawalsList = [];
-  var numbers = [];
-  for (let i in array){
-    
-    numbers = array[i].withdrawals;
-    withdrawalsList.push(numbers);
-
-    return withdrawalsList;
-      }  
+  var list = [];
+  var list2 = [];
+  for(let i in array){
+    var sum = 0;
+    list.push(array[i].withdrawals);
+    for(let j in list[i]){
+      sum += list[i][j];
+    }
+    list2.push(sum);
+  }
+  return list2;
 }
-import {bankAccounts} from '../data/data.js';
-getAllWithdrawals(bankAccounts)
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-11"
 // If the test has all tests passed, switch to the next exercise file

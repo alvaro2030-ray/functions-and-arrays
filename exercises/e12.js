@@ -6,19 +6,24 @@
 
 export function getAllDepositsGreaterThanOneHundred(array) {
   // Your code goes here...
-  var depositsList = [];
-  var deposit = [];
-  for (let i in array) {
-    deposit = array[i].deposits;
-   if(deposit > 100){
-      depositsList.push(array[i].deposits); 
-}
-return depositsList
+  var listBalance = 0;
+  var person = [];
+  var list = [];
+  var now = 0;
+  for(let i in array){
+    listBalance = array[i].deposits;
+    for(let j in listBalance){
+      list.push(listBalance[j]);
+      for(let n in list){
+        now = list[n];
+      }
+      if(now > 100){
+        person.push(now);
+      }
+    }
   }
-
+return person;
 }
-import {bankAccounts} from '../data/data.js';
-getAllDepositsGreaterThanOneHundred(bankAccounts)
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-12"
 // If the test has all tests passed, switch to the next exercise file

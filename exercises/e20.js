@@ -7,9 +7,24 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+  var arrayA = [];
+  var arrayNoA = [];
+  var multiArray = [];
+  for(let i in array){  
+    var hasA = false;
+    for(let j in array[i]){
+      if(array[i][j].toLowerCase() === "a"){
+        arrayA.push(array[i]);
+        hasA = true;
+      } 
+    }
+    if(!hasA){
+      arrayNoA.push(array[i]);
+    }
+  }
+  multiArray.push(arrayA, arrayNoA);
+  return multiArray;
 }
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-20"

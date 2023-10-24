@@ -6,11 +6,15 @@
 
 export function concatArrays(arr1, arr2) {
   // Your code goes here...
-
+  var arr3 = [];
+  for(let i in arr1){
+      arr3.push(arr1[i]);
+    }
+    for(let j in arr2){
+      arr3.push(arr2[j]);
+    }
+  return arr3;
 }
-
-
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-15"
 // If the test has all tests passed, switch to the next exercise file

@@ -7,11 +7,14 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  var arr1 = [];
+  for(let i in array){
+    for(let j in array[i]){
+      arr1.push(array[i][j])
+    }
+  }
+return arr1;
 }
-
-
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"
 // If the test has all tests passed, switch to the next exercise file

@@ -5,23 +5,20 @@
 
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
-  var namesList = [];
-  var names = [];
+  var nameList = [];
+  var names;
+  var finalList = [];
   for (let i in array){
-    
-    names.push(array[i].name);
-    if(names.includes(letter)){
-      namesList.push(names);
-
-    }
-    
+    nameList.push(array[i].name);
+    names = nameList[i];
+    for(let j in names){
+      if(names[j].toLowerCase() === letter){
+        finalList.push(names);
       }
-      return namesList;
     }
-    import {bankAccounts} from '../data/data.js';
-    //getClientsWithLetterInName(bankAccounts, 'e');
-    getClientsWithLetterInName(bankAccounts, 'a');
-    //getClientsWithLetterInName(bankAccounts, 'c');
+  }
+  return finalList;
+}
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
 // If the test has all tests passed, switch to the next exercise file

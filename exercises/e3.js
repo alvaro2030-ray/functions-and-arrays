@@ -8,7 +8,7 @@
  * Example: getAverage([22, 45, 4, 65]) => 34
  * */
 
-export function getAverage(array) {
+export  function getAverage(array) {
   // Your code goes here...
   var sum = 0;
   var added;
@@ -18,12 +18,7 @@ export function getAverage(array) {
     aver1 = added/array.length;
   }
   return aver1;
-
 }
-getAverage([22, 45 , 4, 65]);
-
-
-
 /** 
  * PART 2
  * Create a getStringSum(str) function that returns the sum of any integers that are in the string.
@@ -39,7 +34,7 @@ export function getStringSum(str) {
     for (let i = 0; i < str.length; i++) {
       num1 = parseInt(str[i]);
       if(Number.isInteger(num1)){
-       sum = added += num1;
+       sum  += num1;
      } else if(!Number.isNaN(num1)){ 
       sum = 0;
      }
